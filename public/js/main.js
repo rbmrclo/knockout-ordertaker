@@ -8,7 +8,7 @@ requirejs.config({ baseUrl: 'js/lib',
 // Start the main app logic.
 requirejs(['jquery', 'knockout', 'site'],
 
-function ($, ko, site, jollibee) {
+function ($, ko, site) {
 
   // Knockout Localstorage
   (function(ko){
