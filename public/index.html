@@ -1,0 +1,82 @@
+<html>
+<head>
+  <!-- Meta Tags -->
+  <meta charset='UTF-8' />
+  <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible' />
+  <meta content='width=device-width, initial-scale=1.0' name='viewport' />
+  <title> Ordertaker - Built with knockout </title>
+
+  <link rel='stylesheet' type='text/css' href='css/gumby.css'>
+  <link rel='stylesheet' type='text/css' href='css/styles.css'>
+
+  <script data-main="js/main.js" src="js/require.js"></script>
+
+</head>
+<body>
+    <div class="navbar" id="nav1">
+    <div class="row">
+      <a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
+      <h3 class="six columns logo">
+        <a href="#"> Ordertaker </a>
+      </h3>
+      <!-- <ul data-bind="foreach: restaurants" class="six columns"> -->
+      <!--   <li><a data-bind="click: $root.loadMenu, text: name" href="#"></a></li> -->
+      <!-- </ul> -->
+    </ul>
+    </div>
+  </div>
+
+  <div id='content'>
+    <div class='row'>
+
+      <!-- <h4> Restaurants </h4> -->
+
+      <!-- <br> -->
+      <!-- <table> -->
+      <!--   <thead> -->
+      <!--     <tr> -->
+      <!--       <th> Customer </th> -->
+      <!--       <th> Orders </th> -->
+      <!--       <th> Surcharge </th> -->
+      <!--       <th> Cash on hand </th> -->
+      <!--     </tr> -->
+      <!--   </thead> -->
+      <!--   <tbody data-bind="foreach: customers"> -->
+      <!--     <tr> -->
+      <!--       <td><input data-bind="value: name"/></td> -->
+      <!--       <td data-bind="foreach: orders"> -->
+      <!--         <p data-bind="optionsText: 'order_name"></p> -->
+      <!--       </td> -->
+      <!--       <td></td> -->
+      <!--       <td></td> -->
+      <!--     </tr> -->
+      <!--   </tbody> -->
+      <!-- </table> -->
+    <table>
+        <thead><tr>
+            <th>Passenger name</th><th>Meal</th><th>Surcharge</th><th></th>
+        </tr></thead>
+        <tbody data-bind="foreach: seats">
+            <tr>
+                <td><input data-bind="value: name" /></td>
+                <td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
+                <td data-bind="text: formattedPrice"></td>
+                <td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
+            </tr>    
+        </tbody>
+    </table>
+
+    <button data-bind="click: addSeat, enable: seats().length < 5">Reserve another seat</button>
+
+    <h3 data-bind="visible: totalSurcharge() > 0">
+        Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
+    </h3>
+
+    </div>    
+  </div>
+
+  <div class='footer'>
+    <p> Proudly crafted by <span> <a href='http://twitter.com/rbmrclo'>@rbmrclo</a></span><p>
+  </div>
+</body>
+</html>

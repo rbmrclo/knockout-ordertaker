@@ -1,0 +1,13 @@
+.logo a {
+  color: white;
+  font-weight: 700;
+}
+
+.footer {
+  border-top: 1px solid rgba(20, 20, 20, .1);
+  padding: 20px 0px;
+}
+
+.footer p {
+  text-align: center;
+}

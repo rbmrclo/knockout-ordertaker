@@ -1,0 +1,12 @@
+{
+  'chicken': [
+    { 'image': 'http://goo.gl/i64AdB', 'title': 'Super Value Meal Chickenjoy Bucket (8pcs.)', 'price': 'Php 658.90' },
+    { 'image': 'http://goo.gl/nccQqS', 'title': 'Super Value Meal Chickenjoy Bucket (6pcs.)', 'price': 'Php 548.90' },
+    { 'image': 'http://goo.gl/PM2rBK', 'title': 'Chickenjoy Bucket (8pcs.)', 'price': 'Php 368.50' },
+    { 'image': 'http://goo.gl/zi8pCt', 'title': 'Chickenjoy Bucket (6pcs.)', 'price': 'Php 185.90' }
+  ],
+
+  'burgers': [
+    { 'image': 'http://goo.gl/a0k42C', 'title': 'Cheesy Bacon Mushroom', 'price': 'Php 141.90' }  
+  ]
+}
