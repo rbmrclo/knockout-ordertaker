@@ -6,26 +6,16 @@
   <meta content='width=device-width, initial-scale=1.0' name='viewport' />
   <title> Ordertaker - Built with knockout </title>
 
-  <link rel='stylesheet' type='text/css' href='css/gumby.css'>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
   <link rel='stylesheet' type='text/css' href='css/styles.css'>
 
   <script data-main="js/main.js" src="js/require.js"></script>
 
 </head>
 <body>
-    <div class="navbar" id="nav1">
-    <div class="row">
-      <a class="toggle" gumby-trigger="#nav1 > .row > ul" href="#"><i class="icon-menu"></i></a>
-      <h3 class="six columns logo">
-        <a href="#"> Ordertaker </a>
-      </h3>
-    </ul>
-    </div>
-  </div>
-
-  <div id='content'>
-    <div class='row'>
-    <table>
+  <div class='container'>
+    <h3><a href="#"> Ordertaker </a></h3>
+    <table class='table'>
         <thead><tr>
             <th>Customer Name</th>
             <th>Meal</th>
@@ -50,8 +40,6 @@
             <th> x <a data-bind="click: removeAll" class='removeAll'>Remove all </a></th>
         </thead>
     </table>
-
-    </div>    
   </div>
 </body>
 </html>
