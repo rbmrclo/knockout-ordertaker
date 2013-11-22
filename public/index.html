@@ -19,64 +19,39 @@
       <h3 class="six columns logo">
         <a href="#"> Ordertaker </a>
       </h3>
-      <!-- <ul data-bind="foreach: restaurants" class="six columns"> -->
-      <!--   <li><a data-bind="click: $root.loadMenu, text: name" href="#"></a></li> -->
-      <!-- </ul> -->
     </ul>
     </div>
   </div>
 
   <div id='content'>
     <div class='row'>
-
-      <!-- <h4> Restaurants </h4> -->
-
-      <!-- <br> -->
-      <!-- <table> -->
-      <!--   <thead> -->
-      <!--     <tr> -->
-      <!--       <th> Customer </th> -->
-      <!--       <th> Orders </th> -->
-      <!--       <th> Surcharge </th> -->
-      <!--       <th> Cash on hand </th> -->
-      <!--     </tr> -->
-      <!--   </thead> -->
-      <!--   <tbody data-bind="foreach: customers"> -->
-      <!--     <tr> -->
-      <!--       <td><input data-bind="value: name"/></td> -->
-      <!--       <td data-bind="foreach: orders"> -->
-      <!--         <p data-bind="optionsText: 'order_name"></p> -->
-      <!--       </td> -->
-      <!--       <td></td> -->
-      <!--       <td></td> -->
-      <!--     </tr> -->
-      <!--   </tbody> -->
-      <!-- </table> -->
     <table>
         <thead><tr>
-            <th>Passenger name</th><th>Meal</th><th>Surcharge</th><th></th>
+            <th>Customer Name</th>
+            <th>Meal</th>
+            <th>Surcharge</th>
+            <th></th>
         </tr></thead>
-        <tbody data-bind="foreach: seats">
-            <tr>
+        <tbody data-bind="foreach: customers">
+          <tr>
                 <td><input data-bind="value: name" /></td>
                 <td><select data-bind="options: $root.availableMeals, value: meal, optionsText: 'mealName'"></select></td>
                 <td data-bind="text: formattedPrice"></td>
-                <td><a href="#" data-bind="click: $root.removeSeat">Remove</a></td>
+                <td><a href="#" data-bind="click: $root.removeCustomer">x Remove</a></td>
             </tr>    
         </tbody>
+        <thead>
+          <tr>
+            <th>
+              + <a data-bind="click: addCustomer, enable: customers().length < 5" class='customerButton'> Add Customer</button>
+            </th> 
+            <th> <span data-bind="text: orders()"></span> orders </th>
+            <th> Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span> </th>
+            <th> x <a data-bind="click: removeAll" class='removeAll'>Remove all </a></th>
+        </thead>
     </table>
 
-    <button data-bind="click: addSeat, enable: seats().length < 5">Reserve another seat</button>
-
-    <h3 data-bind="visible: totalSurcharge() > 0">
-        Total surcharge: $<span data-bind="text: totalSurcharge().toFixed(2)"></span>
-    </h3>
-
     </div>    
-  </div>
-
-  <div class='footer'>
-    <p> Proudly crafted by <span> <a href='http://twitter.com/rbmrclo'>@rbmrclo</a></span><p>
   </div>
 </body>
 </html>

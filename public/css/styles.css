@@ -11,3 +11,14 @@
 .footer p {
   text-align: center;
 }
+
+.customerButton, .removeAll {
+  color: white;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+.customerButton:hover, .removeAll:hover{
+  color: white;
+  cursor: pointer;
+}
