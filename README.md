@@ -1,6 +1,6 @@
 # Knockout-Ordertaker
 
-A simple [knockout.js] implementation of my Rails + Ember.js project [WIP] Ordertaker.
+A simple [knockout.js] implementation of my Rails + Ember.js project [Ordertaker] (work in progress).
 <br>
 Just playing around with knockout.js
 
